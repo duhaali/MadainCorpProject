@@ -27,16 +27,15 @@ app.post('/api/login', function (req, res) {
                 var user ={
                     name:"Alex Jones"
                     , email:req.body.email
-                    , password:req.body.password
                     , profilePic:"http://lorempixel.com/500/500/people/"
                 };
                 res.send(200, user);
             }
             else
-                res.send(400,{message:'hey lady, you sent me the wrong password.'});
+                res.send(400,{message:'wrong username or password'});
 
         }else
-            res.send(400,{message:'hey man, you sent me the wrong email.'});
+            res.send(400,{message:'wrong username or password'});
 
     }
     else

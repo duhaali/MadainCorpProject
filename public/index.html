@@ -26,8 +26,8 @@
 
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"  ng-show="user">Duha Ali</a>
+        <nav  ng-controller="loginCtrl" class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#" ng-show="user">{{user.name}}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,8 +36,14 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item"  ng-show="user">
-                      <a class="nav-link" href="#">Change Password</a>
+                    <li class="nav-item"  >
+                        <div ng-show="user"> 
+                            <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
+                            <div ng-show="newPasswordMode">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
+                                <button>Change</button>
+                        </div>
                     </li>
                   </ul>
                 </div>
@@ -65,11 +71,6 @@
             
             <img src="{{user.profilePic}}"/>
             <h1>Welcome {{user.name}}</h1>
-            <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
-            <div ng-show="newPasswordMode">
-                <label for="newPassword">New Password</label>
-                <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
-                <button>Change</button>
             </div>
         </div>
     </div>
