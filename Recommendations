@@ -6,11 +6,13 @@ This is a list of recommendations to make this project better
 
 1.hashing the passward.
 
-2.app should not inform user which is wrong between username and password, it should only display a general error message.
+2.app should not inform user which is wrong between username and password, it should only display a general error message. ✓
 
 3.implement "forgot password" functionality.
 
-4.Implement bootstrap CDN 
+4.Implement bootstrap CDN  ✓
 
-5.server should't return password to client
+5.server should't return password to client ✓
+
+6. implement sestion system
 
