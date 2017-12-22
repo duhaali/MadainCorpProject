@@ -21,9 +21,9 @@ app.use('api/*',req=>{
 app.post('/api/login', function (req, res) {
 
     if(req.body && req.body.email && req.body.password){
-        if(req.body.email == '123@123.123'){
+        if(req.body.email == '1'){
 
-            if(req.body.password == '123123') {
+            if(req.body.password == '1') {
                 var user ={
                     name:"Alex Jones"
                     , email:req.body.email
